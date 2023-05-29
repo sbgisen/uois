@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="uois" type="inference_ros.py" name="uois" output="screen">
+    <remap from="~camera_info" to="/soar/hand_camera/rgb/camera_info"/>
+    <remap from="~rgb" to="/soar/hand_camera/rgb/image_rect"/>
+    <remap from="~depth" to="/soar/hand_camera/depth_registered/image_rect"/>
+    <remap from="~segmap" to="/perception/yolact/label"/>
+  </node>
+</launch>
